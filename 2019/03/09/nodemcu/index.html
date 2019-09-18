@@ -1,0 +1,241 @@
+
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html class="min-height-full">
+  <head>
+    <meta charset="utf-8">
+    <title>Getting started with NodeMCU and MicroPython</title>
+    <meta name="description" content="I recently bought a couple of NodeMCUs for fun and I’ve been enjoying playing with them. After some time in, I’ve decided to share how can you get started with the ESP8266 with MicroPython.These posts will take shape of a tutorial series so that people who’re just getting started may benefit from..." />
+    <meta property="og:title" content="Jay" />
+    <meta property="og:image" content="https://avatars2.githubusercontent.com/u/16067428?v=4" />
+    <meta property="og:description" content="I recently bought a couple of NodeMCUs for fun and I’ve been enjoying playing with them. After some time in, I’ve decided to share how can you get started with the ESP8266 with MicroPython.These posts will take shape of a tutorial series so that people who’re just getting started may benefit from..." />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="/assets/styles.css" rel="stylesheet" type="text/css">
+  </head>
+  <body class="bg-white min-height-full" >
+
+
+
+
+
+  <div class="d-md-flex min-height-full border-md-bottom">
+    <div class="flex-self-stretch border-md-right border-gray-light bg-white col-md-5 col-lg-4 col-xl-3 px-4 px-md-6 px-lg-7 py-6">
+      
+
+<img src="https://avatars2.githubusercontent.com/u/16067428?v=4" class="circle mb-3" style="max-width: 150px;">
+<h1 class=" mb-2 lh-condensed">Jay</h1>
+<p class="mb-3 f4 text-gray">
+  A Java boi at @sarvika. In my free time, I like to mess with GNU/Linux systems, make something new, or either completely break an otherwise perfect system.
+</p>
+
+
+  <div class="f4 mb-6">
+    
+      <div class="d-flex flex-items-center mb-3">
+        <svg height="20" class="octicon octicon-mark-github mr-2 v-align-middle" fill="#24292e" aria-label="GitHub" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+        <a href="https://github.com/realbucksavage" >
+          @realbucksavage
+        </a>
+      </div>
+    
+    
+    
+      <div class="d-flex flex-items-center mb-3 ">
+        <svg height="20" class="octicon octicon-location mr-2 v-align-middle" fill="#24292e" aria-label="Location" viewBox="0 0 12 16" version="1.1" width="15" role="img"><path fill-rule="evenodd" d="M6 0C2.69 0 0 2.5 0 5.5 0 10.02 6 16 6 16s6-5.98 6-10.5C12 2.5 9.31 0 6 0zm0 14.55C4.14 12.52 1 8.44 1 5.5 1 3.02 3.25 1 6 1c1.34 0 2.61.48 3.56 1.36.92.86 1.44 1.97 1.44 3.14 0 2.94-3.14 7.02-5 9.05zM8 5.5c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
+        Jaipur, Rajasthan, India
+      </div>
+    
+    
+    
+  </div>
+
+
+    </div>
+
+    <div class="col-md-7 col-lg-8 col-xl-9 px-4 py-6 px-lg-7 border-top border-md-top-0 bg-gray-light" >
+      <div class="mx-auto" style="max-width: 900px;">
+        <div class="f4  mb-6">
+          <div class="f4 ">
+            <p class="f5"><a href="http://localhost:4000/" class="d-flex flex-items-center "><svg height="16" class="octicon octicon-chevron-left mr-2 v-align-middle" fill="#24292e" aria-label="Home" viewBox="0 0 8 16" version="1.1" width="8" role="img"><path fill-rule="evenodd" d="M5.5 3L7 4.5 3.25 8 7 11.5 5.5 13l-5-5 5-5z"/></svg>Home</a></p>
+            <h1 class="f00-light lh-condensed">Getting started with NodeMCU and MicroPython</h1>
+            <p class="text-gray mb-5">Published Mar 09, 2019</p>
+            
+  
+  <div class="article">
+    <p>I recently bought a couple of <a href="https://en.wikipedia.org/wiki/NodeMCU">NodeMCU</a>s for fun and I’ve been enjoying playing with them. 
+After some time in, I’ve decided to share how can you get started with the ESP8266 with <a href="http://micropython.org/">MicroPython</a>.</p>
+
+<p>These posts will take shape of a tutorial series so that people who’re just getting started may benefit from this.</p>
+
+<p>A <strong>NodeMCU</strong> is an open source IoT platform that includes a firmware that runs on the ESP8266 WiFi SoC (that’s pretty much an Arduino with WiFi). I’ve decided to go with MicroPython instead of Lua or Arduino because I’ve been in and around Python for a decent time (this doesn’t have to do anything with the fact that Pointers gives me an anxiety).</p>
+
+<p>So, let’s jump right into it.</p>
+
+<blockquote>
+  <p>pewdiepie.jpg</p>
+</blockquote>
+
+<p>Oh, a friendly reminder. I’ll be using Ubuntu 18.04LTS during this whole time.</p>
+
+<p><img src="/assets/img/nodemcu/nodemcu.jpg" alt="A NodeMCU" /></p>
+
+<h2 id="step-1-flashing-micropython-firmware">Step 1: Flashing MicroPython Firmware</h2>
+
+<p>Before we actually start writing pro-level MicroPython on our NodeMCU, we’ll have to install a firmware on the NodeMCU’s ROM that can run MicroPython. Let’s start by downloading the firmware itself that can be found <a href="http://micropython.org/download#esp8266">at this link</a>. For now, you want to download the stable releases.</p>
+
+<p>Once we have the firmware, we need a utility that can be used to flash it on the ESP86200. There are plenty of programs that can do that, but I found <a href="https://github.com/espressif/esptool">esptool</a> to be the easiest. It’s available in both Python2 and Python3 versions. I’ll be using the one implemented in Python2. Now is a good time to plug the NodeMCU in your computer using a USB cable.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>pip2 install esptool
+</code></pre></div></div>
+
+<p>After you have installed esptool, make sure that you have rights to access your NodeMCU over the USP port (e.g., group <code class="highlighter-rouge">dialout</code> or <code class="highlighter-rouge">uucp</code>).</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">ls</span> <span class="nt">-l</span> /dev/ttyUSB<span class="k">*</span>
+crw-rw---- 1 root dialout 188, 0 Mar  8 10:55 /dev/ttyUSB0
+<span class="nv">$ </span><span class="nb">sudo </span>usermod <span class="nt">-a</span> <span class="nt">-G</span> dialout <span class="k">${</span><span class="nv">USER</span><span class="k">}</span>
+</code></pre></div></div>
+
+<p>It’s time to check if our current setup works. To do that, simply throw <code class="highlighter-rouge">esptool.py --port /dev/ttyUSB0 flash_id</code> into your terminal:</p>
+
+<p>If you see something like this, it worked.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>esptool.py v2.6
+Serial port /dev/ttyUSB0
+Connecting....
+Detecting chip type... ESP8266
+Chip is ESP8266EX
+Features: WiFi
+MAC: xx:xx:xx:xx:xx:xx
+Uploading stub...
+Running stub...
+Stub running...
+Manufacturer: 68
+Device: 4016
+Detected flash size: 4MB
+Hard resetting via RTS pin...
+</code></pre></div></div>
+
+<p>It’s time to flash the firmware now. To do that, simply run this command and be sure to use the firmware file that you’ve downloaded.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>esptool.py <span class="nt">--port</span> /dev/ttyUSB0 <span class="nt">--baud</span> 460800 write_flash <span class="nt">--flash_size</span><span class="o">=</span>detect <span class="nt">-fm</span> dio 0 esp8266-xxxxxxxx-vxxx.bin
+</code></pre></div></div>
+
+<p>This should take like 10 seconds to complete. If you see something like this, then the installation was successful</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>esptool.py v2.6
+Serial port /dev/ttyUSB0
+Connecting....
+Detecting chip type... ESP8266
+Chip is ESP8266EX
+Features: WiFi
+MAC: bc:dd:c2:23:39:9b
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Auto-detected Flash size: 4MB
+Flash params set to 0x0240
+Compressed 615388 bytes to 399928...
+Wrote 615388 bytes (399928 compressed) at 0x00000000 in 9.0 seconds (effective 547.8 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+</code></pre></div></div>
+
+<p>To verify, look at the available WiFi connections near you. MicroPython firmware creates an access point with SSID <code class="highlighter-rouge">MicroPython-xxxxxx</code> when the device is booted.</p>
+
+<p><img src="/assets/img/nodemcu/wifi.png" alt="WiFi networks showing MicroPython" /></p>
+
+<p>Swwweet!</p>
+
+<h2 id="step-2-getting-into-the-repl-prompt">Step 2: Getting into the <code class="highlighter-rouge">REPL</code> prompt</h2>
+
+<p>From the <a href="http://docs.micropython.org/en/v1.9.3/wipy/wipy/tutorial/repl.html">MicroPython docs</a>…</p>
+
+<blockquote>
+  <p>REPL stands for <code class="highlighter-rouge">Read Evaluate Print Loop</code> and is the name given to the interactive MicroPython prompt that you can access on the WiPy. Using the REPL is by far the easiest way to test out your code and run commands. You can use the REPL in addition to writing scripts in <code class="highlighter-rouge">main.py</code>.</p>
+</blockquote>
+
+<p>There are several ways of getting into the REPL prompt. You can refer to the <a href="http://docs.micropython.org/en/v1.9.3/wipy/wipy/tutorial/repl.html">documentation</a> to get into it. I had <code class="highlighter-rouge">uucp</code> installed on the machine, so I’m going to use the <code class="highlighter-rouge">cu</code> utility.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cu <span class="nt">-l</span> /dev/ttyUSB0 <span class="nt">-s</span> 115200
+</code></pre></div></div>
+
+<p>If the command is successful, it should say <code class="highlighter-rouge">Connected</code>. Smack dat enter key after this and you should see the REPL prompt (<code class="highlighter-rouge">&gt;&gt;&gt; </code>), which is basically a Python prompt but micro and somewhat extra cool.</p>
+
+<p>You can type in standard Python code in it and it should work</p>
+
+<p><img src="/assets/img/nodemcu/repl.png" alt="Executing Python in REPL" /></p>
+
+<h2 id="step-3-getting-micropython-y">Step 3: Getting MicroPython-y</h2>
+
+<p>“Hello world” statements are not fun enough, so let’s experiment with the built-in LED. The traditional first program for hobby electronics is a blinking light. We will try to build that.</p>
+
+<p>First, let’s have a look at the pinout diagram of an ESP86200</p>
+
+<p><img src="/assets/img/nodemcu/NodeMCU_GPIOs.png" alt="NodeMCU Pinout" /></p>
+
+<p>The NodeMCU has 2 built-in LEDs (circled). The one near the antenna (the golden zig-zag line) is internally connected to <code class="highlighter-rouge">gpio2</code> and the other one to <code class="highlighter-rouge">gpio16</code>. Let’s turn both of them on.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span>
+
+<span class="n">led_1</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
+<span class="n">led_2</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
+
+<span class="n">led_2</span><span class="o">.</span><span class="n">off</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>Sweet, now let’s create a simple script that blinks both of the LEDs one by one.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">led_1</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
+<span class="n">led_2</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">switch_leds_1</span><span class="p">():</span>
+    <span class="n">led_1</span><span class="o">.</span><span class="n">off</span><span class="p">()</span>
+    <span class="n">led_2</span><span class="o">.</span><span class="n">on</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">switch_leds_2</span><span class="p">():</span>
+    <span class="n">led_1</span><span class="o">.</span><span class="n">on</span><span class="p">()</span>
+    <span class="n">led_2</span><span class="o">.</span><span class="n">off</span><span class="p">()</span>
+
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="n">switch_leds_1</span><span class="p">()</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+    <span class="n">switch_leds_2</span><span class="p">()</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+</code></pre></div></div>
+
+<hr />
+
+<p>That’s pretty much it for the basics. I’ll be doing advanced things like creating boot scripts and web servers in my next post.</p>
+
+<h4 id="cyber-potato"><code class="highlighter-rouge">CYBER POTATO</code></h4>
+
+<p><img src="/assets/img/nodemcu/cyberpotato.jpg" alt="CYBER_POTATO" /></p>
+
+  </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  </body>
+</html>
+
