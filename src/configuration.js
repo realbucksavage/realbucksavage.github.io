@@ -31,6 +31,11 @@ export default {
         name: "Python",
         web_url: "https://github.com/topics/python",
         image_url: `${gh_interests_base}/python/python.png`
+      },
+      {
+        name: "ReactJS",
+        web_url: "https://github.com/topics/react",
+        image_url: `${gh_interests_base}/react/react.png`
       }
     ]
   }
