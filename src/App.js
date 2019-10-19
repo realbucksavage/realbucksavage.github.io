@@ -9,7 +9,7 @@ function App() {
       <div className="d-md-flex min-height-full border-md-bottom">
         <MastHead />
 
-        <Content content="Test Content Bois" />
+        <Content />
       </div>
     </body>
   );
