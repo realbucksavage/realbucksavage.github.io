@@ -9,7 +9,6 @@ export default {
         "botnet",
         "eivor-ai",
         "blog4git",
-        "golang-todo-app",
         "pymail-client"
       ]
     }
