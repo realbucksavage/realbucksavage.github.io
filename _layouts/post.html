@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+<a href="/blog">cd ..</a> | 
+<a href="{{ site.url }}">{{ site.theme_config.back_home_text }}</a>
+<h1>{{ page.title }}</h1>
+<small>rant_date: {{ page.date | date: site.theme_config.date_format }}</small>
+{{ content }}
+
+<hr data-content="fin">

@@ -1,0 +1,31 @@
+page:
+  title: Jay's site
+
+title: i have a site
+author: realbucksavage
+email: me@bsavage.xyz 
+url: https://bsavage.xyz 
+description: > 
+  and this is it.
+
+permalink: /blog/:slug
+
+favicon: "./logo.png" 
+
+theme: no-style-please 
+
+paginate: 10
+paginate_path: /blog/:num/
+
+theme_config:
+  back_home_text: "cd ~/" 
+  date_format: "%Y-%m-%d" 
+  show_description: true 
+
+sass:
+  style: :compressed
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
