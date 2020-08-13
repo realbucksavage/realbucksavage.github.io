@@ -12,7 +12,8 @@ permalink: /blog/:slug
 
 favicon: "./logo.png" 
 
-theme: no-style-please 
+#theme: no-style-please 
+remote_theme: realbucksavage/realbucksavage.github.io
 
 paginate: 10
 paginate_path: /blog/:num/
