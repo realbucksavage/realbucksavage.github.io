@@ -4,7 +4,7 @@ title = "Jay's Site"
 
 Jay here!
 
-I'm working on supercharging [Sarvika Technologies](https://www.sarvika.com) with my passion about tech since 2013,
+I'm working on supercharging [Sarvika Technologies](https://www.sarvika.com) using my passion about tech since 2013,
 where my role is to learn and evolve technology, as we continue to build and ship amazing software to our clients.
 
 I started up as a web developer, responsible for making changes to our HTML5 websites, which were built and served
