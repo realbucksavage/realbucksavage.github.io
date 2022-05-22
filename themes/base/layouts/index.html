@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div class="container">
+    {{ .Content }}
+    
+    {{ if gt (len .Pages) 0 }}
+
+        <h2>posts</h2>
+
+        {{ range .Pages }}
+            <span><time>{{ .Date.Format "2006-01-02" }}</time> <a href="{{ .Permalink }}">{{ .Title }}</a></span>
+        {{ end }}
+    
+    {{ end }}
+</div>
+{{ end }}

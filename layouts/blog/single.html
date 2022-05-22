@@ -1,0 +1,8 @@
+{{ define "main" }}
+<div class="container">
+    <h1>{{ .Title }}</h1>
+    <time>rant_date: {{ .PublishDate.Format "Monday, Jan 2, 2006" }}</time>
+    <hr>
+    {{ .Content }}
+</div>
+{{ end }}

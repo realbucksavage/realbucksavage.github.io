@@ -1,0 +1,42 @@
+baseURL = 'https://bsavage.xyz/'
+languageCode = 'en-us'
+title = "Jay's Site"
+theme = 'base'
+
+[params]
+    author = 'Jay'
+    description = "A dump of Jay's rants"
+    [params.style]  # appearance options (can be omitted)
+        fontFamily = "Cascadia Code, Hack, Inconsolata, monospace"
+        pageWidth = "750px"
+        avatarSize = "90px"
+        colorBlack = "#222222"
+        colorRed = "#dc3545"
+    [params.footer]
+        text = 'Clowre'
+        url = 'https://www.clowre.com'
+    [[params.socialIcons]]
+        icon = 'fab fa-github'
+        title = 'GitHub'
+        url = 'https://github.com/realbucksavage'
+    [[params.socialIcons]]
+        icon = 'fas fa-envelope'
+        title = 'email'
+        url = 'mailto:me@bsavage.xyz'
+
+[markup.goldmark.renders]
+    unsafe = true
+
+[menu]
+    [[menu.main]]
+        name = "cd ~"
+        url = "/"
+        weight = 1
+    [[menu.main]]
+        name = "Sarvika Technologies"
+        url = "https://www.sarvika.com"
+        weight = 2
+    [[menu.main]]
+        name = "Clowre"
+        url = "https://www.clowre.com"
+        weight = 3
