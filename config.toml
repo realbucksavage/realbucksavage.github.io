@@ -24,7 +24,7 @@ theme = 'base'
         title = 'email'
         url = 'mailto:me@bsavage.xyz'
 
-[markup.goldmark.renders]
+[markup.goldmark.renderer]
     unsafe = true
 
 [menu]

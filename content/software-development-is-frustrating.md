@@ -22,11 +22,14 @@ Admittedly, teams that choose faster deliveries over *better* ones project more 
 
 Over time, the software may get more and more feature updates, and the built-up **cruft** might slow teams down. If teams like this don't pay their interest as they continue to develop, they might even end up doing a big chunk of code rewrite. A substantial rewrite at that point can easily take up more time than what paying off the interest would have taken.
 
-[Martin Flower](https://martinfowler.com) describes this notion in his [Design Stamina Hypothesis](https://martinfowler.com/bliki/DesignStaminaHypothesis.html), and I believe that it can't be more accurate than this.
+
+[Martin Flower](https://martinfowler.com) describes this notion in his [Design Stamina Hypothesis](https://martinfowler.com/bliki/DesignStaminaHypothesis.html)<sup>[1]</sup>, and I believe that it can't be more accurate than this.
 
 ![Cumulative Features and Technical Debt](/cumulativefeatures.png)
 
 <center><small><i>from <a href="https://martinfowler.com/bliki/DesignStaminaHypothesis.html">Design Stamina Hypothesis</a> by Martin Fowler</i></small></center>
+
+---
 
 Design activities indeed take time, and that time can be spent on writing new features and focusing on time to market. Initially, the payoff of having no design can be worth it but it keeps reducing as more and more features are shipped. Design or no design, teams **will** finish their features anyway, but the reduced time to market for no design teams ends up costing more than the time saved initially. 
 
@@ -44,4 +47,4 @@ Thanks for reading. [Metallica!](https://www.youtube.com/watch?v=tAGnKpE4NCI)
 
 Citations:
 
-- Martin Fowler
+[1] Fowler, M. (2007, June 20). Design Stamina Hypothesis - <https://martinfowler.com/bliki/DesignStaminaHypothesis.html>
