@@ -49,7 +49,7 @@ $y-medium: 1.0rem;
     line-height: 1.2;
 }
 .container {
-    max-width: $max-width;
+    // max-width: $max-width;
 }
 .navbar-brand {
     @extend %link-dark;
