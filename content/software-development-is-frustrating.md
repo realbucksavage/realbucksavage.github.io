@@ -23,7 +23,7 @@ Admittedly, teams that choose faster deliveries over *better* ones project more 
 Over time, the software may get more and more feature updates, and the built-up **cruft** might slow teams down. If teams like this don't pay their interest as they continue to develop, they might even end up doing a big chunk of code rewrite. A substantial rewrite at that point can easily take up more time than what paying off the interest would have taken.
 
 
-[Martin Flower](https://martinfowler.com) describes this notion in his [Design Stamina Hypothesis](https://martinfowler.com/bliki/DesignStaminaHypothesis.html)<sup>[1]</sup>, and I believe that it can't be more accurate than this.
+[Martin Fowler](https://martinfowler.com) describes this notion in his [Design Stamina Hypothesis](https://martinfowler.com/bliki/DesignStaminaHypothesis.html)<sup>[1]</sup>, and I believe that it can't be more accurate than this.
 
 ![Cumulative Features and Technical Debt](/cumulativefeatures.png)
 
