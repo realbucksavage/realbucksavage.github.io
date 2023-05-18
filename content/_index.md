@@ -13,7 +13,7 @@ With time, I learned to deliver software that scales with the organizations usin
 
 Finally, I built [Clowre](https://www.clowre.com), which helped our team to build and ship quality software in an even faster and more reliable way, and introduced us to an even larger tech stack.
 
-As a Software Architect, I strongly believe that software development is a profession that will always stay young. As people evolve, technology will evolve too. Creating new technology will become accessible to more and more people.
+As an Enterprise Architect, I strongly believe that software development is a profession that will always stay young. As people evolve, technology will evolve too. Creating new technology will become accessible to more and more people.
 
 ---
 
